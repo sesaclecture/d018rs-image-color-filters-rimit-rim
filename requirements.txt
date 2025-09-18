@@ -2,3 +2,5 @@ opencv-python
 matplotlib
 PyQt5
 pytest
+PyYAML
+lark
