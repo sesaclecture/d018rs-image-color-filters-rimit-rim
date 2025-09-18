@@ -7,14 +7,14 @@ import matplotlib.pyplot as plt
 class Filters:
     # TODO: Image kernels
     Kernels = {
-        "Original": [[0, 0, 0], [0, 1, 0], [0, 0, 0]],
+        "Original": np.array([[0, 0, 0], [0, 1, 0], [0, 0, 0]], dtype=np.float32),
         "Blur": np.array([[1/9, 1/9, 1/9], [1/9, 1/9, 1/9], [1/9, 1/9, 1/9]], dtype=np.float32),
         "Gaussian blur": np.array([[1/16, 2/16, 1/16], [2/16, 4/16, 2/16], [1/16, 2/16, 1/16]], dtype=np.float32),
-        "Sharpen": [[0, -1, 0], [-1, 5, -1], [0, -1, 0]],
-        "Sobel (x)": [[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]],
-        "Sobel (y)": [[-1, -2, -1], [0, 0, 0], [1, 2, 1]],
-        "Edge detection": [[-1, -1, -1], [-1, 8, -1], [-1, -1, -1]],
-        "Emboss": [[-2, -1, 0], [-1, 1, 1], [0, 1, 2]]
+        "Sharpen": np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]], dtype=np.float32),
+        "Sobel (x)": np.array([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]], dtype=np.float32),
+        "Sobel (y)": np.array([[-1, -2, -1], [0, 0, 0], [1, 2, 1]], dtype=np.float32),
+        "Edge detection": np.array([[-1, -1, -1], [-1, 8, -1], [-1, -1, -1]], dtype=np.float32),
+        "Emboss": np.array([[-2, -1, 0], [-1, 1, 1], [0, 1, 2]], dtype=np.float32)
     }
 
     def __init__(self, kernels=Kernels):
